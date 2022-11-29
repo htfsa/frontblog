@@ -33,17 +33,22 @@ export default function Navbar() {
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
+          <Typography variant="h4" className={classes.title}>
+          BlogPessoal
+          </Typography>
+          <>
           <Typography variant="h6" className={classes.title}>
             <Link to='home'>
             Home
             </Link >
           </Typography>
+          </>
           <Typography variant="h6" className={classes.title}>
           <Link to='about'>
-          About
+          Sobre nós
             </Link >
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit">Logar</Button>
         </Toolbar>
       </AppBar>
     </div>
