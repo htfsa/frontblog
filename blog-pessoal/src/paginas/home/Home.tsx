@@ -8,12 +8,16 @@ import { useNavigate } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/tokens/tokensReducer';
 
 
 function Home() {
     
     let navigate = useNavigate();
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState['tokens']>(
+        (state) => state.tokens
+      )
     
     useEffect(() => {
       if (token == "") {
